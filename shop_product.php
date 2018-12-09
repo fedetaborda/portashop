@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html class="no-js" lang="zxx">
 
@@ -134,7 +133,27 @@
                                             <div id="list_cart"></div>
 
                                             <div id="footer"></div>
-                                             
+
+                                           <!-- <div class="cart-footer">
+                                                <ul class="price-content">
+                                                    <li>Subtotal
+                                                        <span>$57.95</span>
+                                                    </li>
+                                                    <li>Shipping
+                                                        <span>$7.00</span>
+                                                    </li>
+                                                    <li>Taxes
+                                                        <span>$0.00</span>
+                                                    </li>
+                                                    <li>Total
+                                                        <span>$64.95</span>
+                                                    </li>
+                                                </ul>
+                                                <div class="cart-actions text-center">
+                                                    <a class="cart-checkout" href="checkout.html">Checkout</a>
+                                                </div>
+                                            </div> -->
+                                              
                                         </li>
 
                                     </ul>
@@ -536,7 +555,17 @@
             </div>
         </header>
         <!-- Header Area End Here -->
-
+        <div class="breadcrumb-area">
+            <div class="container">
+                <ol class="breadcrumb breadcrumb-list">
+                    <li class="breadcrumb-item">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="breadcrumb-item active">shop</li>
+                </ol>
+            </div>
+        </div>
+        <!-- Breadcrumb Area End Here -->
         <!-- Shop Page Start -->
         <div class="main-shop-page ptb-80">
             <div class="container">
@@ -699,23 +728,23 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a data-toggle="tab" href="#list-view">
+                                        <a data-toggle="tab" href="#list-view" id="lista-prod">
                                             <i class="fa fa-list-ul"></i>
                                         </a>
                                     </li>
                                 </ul>
-                                <span class="show-items">Total de Producto (3250)</span>
+                                <span class="show-items">There are 8 products.</span>
                             </div>
                             <!-- Toolbar Short Area Start -->
                             <div class="main-toolbar-sorter clearfix">
                                 <div class="toolbar-sorter d-md-flex align-items-center">
                                     <label>Sort By:</label>
                                     <select class="sorter wide">
-                                        <option value="Position">Relevancia</option>
-                                        <option value="Product Name">Descripción, A - Z</option>
-                                        <option value="Product Name">Descripción, Z - A</option>
-                                        <option value="Price">Pricio mas Bajo</option>
-                                        <option value="Price">Pricio mas Alto</option>
+                                        <option value="Position">Relevance</option>
+                                        <option value="Product Name">Neme, A to Z</option>
+                                        <option value="Product Name">Neme, Z to A</option>
+                                        <option value="Price">Price low to heigh</option>
+                                        <option value="Price">Price heigh to low</option>
                                     </select>
                                 </div>
                             </div>
@@ -726,652 +755,30 @@
                             <!-- Grid & List Main Area End -->
                             <div class="tab-content">
                                 <div id="grid-view" class="tab-pane fade show active">
-                                    <div class="row border-hover-effect ">
-                                        <div class="col-lg-4 col-md-4 col-sm-6 col-6">
-                                            <!-- Single Product Start -->
-                                            <div class="single-ponno-product">
-                                                <!-- Product Image Start -->
-                                                <div class="pro-img">
-                                                    <a href="product-details.html">
-                                                        <img class="primary-img" src="img/products/p1.jpg" alt="single-product">
-                                                    </a>
-                                                    <div class="pro-actions-link">
-                                                        <a href="compare.html" title="Compare">
-                                                            <span class="icon icon-MusicMixer"></span>
-                                                        </a>
-                                                        <a href="#" data-toggle="modal" data-target="#myModal" title="Quick View">
-                                                            <span class="icon icon-Eye"></span>
-                                                        </a>
-                                                    </div>
-                                                    <a class="sticker-new " href="wishlist.html">
-                                                        <span class="ti-heart"></span>
-                                                    </a>
-                                                    <span class="sticker-sale">new</span>
-                                                </div>
-                                                <!-- Product Image End -->
-                                                <!-- Product Content Start -->
-                                                <div class="pro-content">
-                                                    <div class="pro-info">
-                                                        <h4>
-                                                            <a href="product-details.html">xer jenon dslr</a>
-                                                        </h4>
-                                                        <p>
-                                                            <span class="special-price">$140.00</span>
-                                                        </p>
-                                                        <div class="product-rating">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <span class="quantity-pro">(200+)</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="pro-add-cart">
-                                                        <button type="button" valor-id="<?php echo $producto->codigo_prod ?>">Agregar
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <!-- Product Content End -->
-                                            </div>
-                                            <!-- Single Product End -->
-                                        </div>
-                                        <div class="col-lg-4 col-md-4 col-sm-6 col-6">
-                                            <!-- Single Product Start -->
-                                            <div class="single-ponno-product">
-                                                <!-- Product Image Start -->
-                                                <div class="pro-img">
-                                                    <a href="product-details.html">
-                                                        <img class="primary-img" src="img/products/p2.jpg" alt="single-product">
-                                                    </a>
-                                                    <div class="pro-actions-link">
-                                                        <a href="compare.html" title="Compare">
-                                                            <span class="icon icon-MusicMixer"></span>
-                                                        </a>
-                                                        <a href="#" data-toggle="modal" data-target="#myModal" title="Quick View">
-                                                            <span class="icon icon-Eye"></span>
-                                                        </a>
-                                                    </div>
-                                                    <a class="sticker-new " href="wishlist.html">
-                                                        <span class="ti-heart"></span>
-                                                    </a>
-                                                    <span class="sticker-sale">new</span>
-                                                </div>
-                                                <!-- Product Image End -->
-                                                <!-- Product Content Start -->
-                                                <div class="pro-content">
-                                                    <div class="pro-info">
-                                                        <h4>
-                                                            <a href="product-details.html">jibon mouse pad</a>
-                                                        </h4>
-                                                        <p>
-                                                            <span class="special-price">$10.00</span>
-                                                        </p>
-                                                        <div class="product-rating">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                            <span class="quantity-pro">(200+)</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="pro-add-cart">
-                                                    <button type="button" valor-id="<?php echo $producto->codigo_prod ?>">Agregar
-                                                    </button>
-                                                    </div>
-                                                </div>
-                                                <!-- Product Content End -->
-                                            </div>
-                                            <!-- Single Product End -->
-                                        </div>
-                                        <div class="col-lg-4 col-md-4 col-sm-6 col-6">
-                                            <!-- Single Product Start -->
-                                            <div class="single-ponno-product">
-                                                <!-- Product Image Start -->
-                                                <div class="pro-img">
-                                                    <a href="product-details.html">
-                                                        <img class="primary-img" src="img/products/p3.jpg" alt="single-product">
-                                                    </a>
-                                                    <div class="pro-actions-link">
-                                                        <a href="compare.html" title="Compare">
-                                                            <span class="icon icon-MusicMixer"></span>
-                                                        </a>
-                                                        <a href="#" data-toggle="modal" data-target="#myModal" title="Quick View">
-                                                            <span class="icon icon-Eye"></span>
-                                                        </a>
-                                                    </div>
-                                                    <a class="sticker-new " href="wishlist.html">
-                                                        <span class="ti-heart"></span>
-                                                    </a>
-                                                    <span class="sticker-sale">new</span>
-                                                </div>
-                                                <!-- Product Image End -->
-                                                <!-- Product Content Start -->
-                                                <div class="pro-content">
-                                                    <div class="pro-info">
-                                                        <h4>
-                                                            <a href="product-details.html">olian selfie cam</a>
-                                                        </h4>
-                                                        <p>
-                                                            <span class="special-price">$14.00</span>
-                                                        </p>
-                                                        <div class="product-rating">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <span class="quantity-pro">(140+)</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="pro-add-cart">
-                                                        <button type="button" valor-id="<?php echo $producto->codigo_prod ?>">Agregar
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <!-- Product Content End -->
-                                            </div>
-                                            <!-- Single Product End -->
-                                        </div>
-                                        <div class="col-lg-4 col-md-4 col-sm-6 col-6">
-                                            <!-- Single Product Start -->
-                                            <div class="single-ponno-product">
-                                                <!-- Product Image Start -->
-                                                <div class="pro-img">
-                                                    <a href="product-details.html">
-                                                        <img class="primary-img" src="img/products/p4.jpg" alt="single-product">
-                                                    </a>
-                                                    <div class="pro-actions-link">
-                                                        <a href="compare.html" title="Compare">
-                                                            <span class="icon icon-MusicMixer"></span>
-                                                        </a>
-                                                        <a href="#" data-toggle="modal" data-target="#myModal" title="Quick View">
-                                                            <span class="icon icon-Eye"></span>
-                                                        </a>
-                                                    </div>
-                                                    <a class="sticker-new " href="wishlist.html">
-                                                        <span class="ti-heart"></span>
-                                                    </a>
-                                                    <span class="sticker-sale">new</span>
-                                                </div>
-                                                <!-- Product Image End -->
-                                                <!-- Product Content Start -->
-                                                <div class="pro-content">
-                                                    <div class="pro-info">
-                                                        <h4>
-                                                            <a href="product-details.html">Ponno Dia remote</a>
-                                                        </h4>
-                                                        <p>
-                                                            <span class="special-price">$32.00</span>
-                                                        </p>
-                                                        <div class="product-rating">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                            <span class="quantity-pro">(350+)</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="pro-add-cart">
-                                                    <button type="button" valor-id="<?php echo $producto->codigo_prod ?>">Agregar
-                                                    </button>
-                                                    </div>
-                                                </div>
-                                                <!-- Product Content End -->
-                                            </div>
-                                            <!-- Single Product End -->
-                                        </div>
-                                        <div class="col-lg-4 col-md-4 col-sm-6 col-6">
-                                            <!-- Single Product Start -->
-                                            <div class="single-ponno-product">
-                                                <!-- Product Image Start -->
-                                                <div class="pro-img">
-                                                    <a href="product-details.html">
-                                                        <img class="primary-img" src="img/products/p6.jpg" alt="single-product">
-                                                    </a>
-                                                    <div class="pro-actions-link">
-                                                        <a href="compare.html" title="Compare">
-                                                            <span class="icon icon-MusicMixer"></span>
-                                                        </a>
-                                                        <a href="#" data-toggle="modal" data-target="#myModal" title="Quick View">
-                                                            <span class="icon icon-Eye"></span>
-                                                        </a>
-                                                    </div>
-                                                    <a class="sticker-new " href="wishlist.html">
-                                                        <span class="ti-heart"></span>
-                                                    </a>
-                                                    <span class="sticker-sale">new</span>
-                                                </div>
-                                                <!-- Product Image End -->
-                                                <!-- Product Content Start -->
-                                                <div class="pro-content">
-                                                    <div class="pro-info">
-                                                        <h4>
-                                                            <a href="product-details.html">Diari keyboard</a>
-                                                        </h4>
-                                                        <p>
-                                                            <span class="special-price">$140.00</span>
-                                                        </p>
-                                                        <div class="product-rating">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-sta-o"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                            <span class="quantity-pro">(50+)</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="pro-add-cart">
-                                                    <button type="button" valor-id="<?php echo $producto->codigo_prod ?>">Agregar
-                                                    </button>
-                                                    </div>
-                                                </div>
-                                                <!-- Product Content End -->
-                                            </div>
-                                            <!-- Single Product End -->
-                                        </div>
-                                        <div class="col-lg-4 col-md-4 col-sm-6 col-6">
-                                            <!-- Single Product Start -->
-                                            <div class="single-ponno-product">
-                                                <!-- Product Image Start -->
-                                                <div class="pro-img">
-                                                    <a href="product-details.html">
-                                                        <img class="primary-img" src="img/products/p5.jpg" alt="single-product">
-                                                    </a>
-                                                    <div class="pro-actions-link">
-                                                        <a href="compare.html" title="Compare">
-                                                            <span class="icon icon-MusicMixer"></span>
-                                                        </a>
-                                                        <a href="#" data-toggle="modal" data-target="#myModal" title="Quick View">
-                                                            <span class="icon icon-Eye"></span>
-                                                        </a>
-                                                    </div>
-                                                    <a class="sticker-new " href="wishlist.html">
-                                                        <span class="ti-heart"></span>
-                                                    </a>
-                                                    <span class="sticker-sale">new</span>
-                                                </div>
-                                                <!-- Product Image End -->
-                                                <!-- Product Content Start -->
-                                                <div class="pro-content">
-                                                    <div class="pro-info">
-                                                        <h4>
-                                                            <a href="product-details.html">Razra solo Pro</a>
-                                                        </h4>
-                                                        <p>
-                                                            <span class="special-price">$30.00</span>
-                                                        </p>
-                                                        <div class="product-rating">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <span class="quantity-pro">(100+)</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="pro-add-cart">
-                                                    <button type="button" valor-id="<?php echo $producto->codigo_prod ?>">Agregar
-                                                    </button>
-                                                    </div>
-                                                </div>
-                                                <!-- Product Content End -->
-                                            </div>
-                                            <!-- Single Product End -->
-                                        </div>
-                                        <div class="col-lg-4 col-md-4 col-sm-6 col-6">
-                                            <!-- Single Product Start -->
-                                            <div class="single-ponno-product">
-                                                <!-- Product Image Start -->
-                                                <div class="pro-img">
-                                                    <a href="product-details.html">
-                                                        <img class="primary-img" src="img/products/p7.jpg" alt="single-product">
-                                                    </a>
-                                                    <div class="pro-actions-link">
-                                                        <a href="compare.html" title="Compare">
-                                                            <span class="icon icon-MusicMixer"></span>
-                                                        </a>
-                                                        <a href="#" data-toggle="modal" data-target="#myModal" title="Quick View">
-                                                            <span class="icon icon-Eye"></span>
-                                                        </a>
-                                                    </div>
-                                                    <a class="sticker-new " href="wishlist.html">
-                                                        <span class="ti-heart"></span>
-                                                    </a>
-                                                    <span class="sticker-sale">new</span>
-                                                </div>
-                                                <!-- Product Image End -->
-                                                <!-- Product Content Start -->
-                                                <div class="pro-content">
-                                                    <div class="pro-info">
-                                                        <h4>
-                                                            <a href="product-details.html">jenon Real Box</a>
-                                                        </h4>
-                                                        <p>
-                                                            <span class="special-price">$140.00</span>
-                                                        </p>
-                                                        <div class="product-rating">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                            <span class="quantity-pro">(200+)</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="pro-add-cart">
-                                                        <a href="cart.html" title="Add to Cart">Add To Cart</a>
-                                                    </div>
-                                                </div>
-                                                <!-- Product Content End -->
-                                            </div>
-                                            <!-- Single Product End -->
-                                        </div>
-                                        <div class="col-lg-4 col-md-4 col-sm-6 col-6">
-                                            <!-- Single Product Start -->
-                                            <div class="single-ponno-product">
-                                                <!-- Product Image Start -->
-                                                <div class="pro-img">
-                                                    <a href="product-details.html">
-                                                        <img class="primary-img" src="img/products/p9.jpg" alt="single-product">
-                                                    </a>
-                                                    <div class="pro-actions-link">
-                                                        <a href="compare.html" title="Compare">
-                                                            <span class="icon icon-MusicMixer"></span>
-                                                        </a>
-                                                        <a href="#" data-toggle="modal" data-target="#myModal" title="Quick View">
-                                                            <span class="icon icon-Eye"></span>
-                                                        </a>
-                                                    </div>
-                                                    <a class="sticker-new " href="wishlist.html">
-                                                        <span class="ti-heart"></span>
-                                                    </a>
-                                                    <span class="sticker-sale">new</span>
-                                                </div>
-                                                <!-- Product Image End -->
-                                                <!-- Product Content Start -->
-                                                <div class="pro-content">
-                                                    <div class="pro-info">
-                                                        <h4>
-                                                            <a href="product-details.html">Ponno Real Box</a>
-                                                        </h4>
-                                                        <p>
-                                                            <span class="special-price">$140.00</span>
-                                                        </p>
-                                                        <div class="product-rating">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <span class="quantity-pro">(200+)</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="pro-add-cart">
-                                                        <a href="cart.html" title="Add to Cart">Add To Cart</a>
-                                                    </div>
-                                                </div>
-                                                <!-- Product Content End -->
-                                            </div>
-                                            <!-- Single Product End -->
-                                        </div>
-                                        <div class="col-lg-4 col-md-4 col-sm-6 col-6">
-                                            <!-- Single Product Start -->
-                                            <div class="single-ponno-product">
-                                                <!-- Product Image Start -->
-                                                <div class="pro-img">
-                                                    <a href="product-details.html">
-                                                        <img class="primary-img" src="img/products/p8.jpg" alt="single-product">
-                                                    </a>
-                                                    <div class="pro-actions-link">
-                                                        <a href="compare.html" title="Compare">
-                                                            <span class="icon icon-MusicMixer"></span>
-                                                        </a>
-                                                        <a href="#" data-toggle="modal" data-target="#myModal" title="Quick View">
-                                                            <span class="icon icon-Eye"></span>
-                                                        </a>
-                                                    </div>
-                                                    <a class="sticker-new " href="wishlist.html">
-                                                        <span class="ti-heart"></span>
-                                                    </a>
-                                                    <span class="sticker-sale">new</span>
-                                                </div>
-                                                <!-- Product Image End -->
-                                                <!-- Product Content Start -->
-                                                <div class="pro-content">
-                                                    <div class="pro-info">
-                                                        <h4>
-                                                            <a href="product-details.html">Oliven Ip Cam</a>
-                                                        </h4>
-                                                        <p>
-                                                            <span class="special-price">$140.00</span>
-                                                        </p>
-                                                        <div class="product-rating">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <span class="quantity-pro">(10+)</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="pro-add-cart">
-                                                        <a href="cart.html" title="Add to Cart">Add To Cart</a>
-                                                    </div>
-                                                </div>
-                                                <!-- Product Content End -->
-                                            </div>
-                                            <!-- Single Product End -->
-                                        </div>
+                                    <div class="row border-hover-effect outer_div">                                        
+                                
                                     </div>
                                     <!-- Row End -->
                                 </div>
                                 <!-- #grid view End -->
-                                <div id="list-view" class="tab-pane fade fix">
-                                    <!-- Single Product Start -->
-                                    <div class="single-ponno-product">
-                                        <!-- Product Image Start -->
-                                        <div class="pro-img">
-                                            <a href="product-details.html">
-                                                <img class="primary-img" src="img/products/p2.jpg" alt="single-product">
-                                            </a>
-                                        </div>
-                                        <!-- Product Image End -->
-                                        <!-- Product Content Start -->
-                                        <div class="pro-content">
-                                            <div class="pro-info">
-                                                <h4>
-                                                    <a href="product-details.html">jenon Real Box</a>
-                                                </h4>
-                                                <p>
-                                                    <span class="special-price">$70.00</span>
-                                                </p>
-                                                <div class="product-rating">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star-o"></i>
-                                                    <i class="fa fa-star-o"></i>
-                                                    <span class="quantity-pro">(200+)</span>
-                                                </div>
-                                                <p>Phone is a revolutionary new mobile phone that allows you to make a call
-                                                    by simply tapping a name or number in your address book, a favorites
-                                                    list, or a call log. It also automatically syncs all your..</p>
-                                                <p>
-                                                <div class="pro-actions">
-                                                    <div class="pro-add-cart">
-                                                        <a href="cart.html" title="Add to Cart">Add To Cart</a>
-                                                    </div>
-                                                    <div class="pro-actions-link">
-                                                        <a href="compare.html" title="Compare">
-                                                            <span class="icon icon-MusicMixer"></span>
-                                                        </a>
-                                                        <a href="#" data-toggle="modal" data-target="#myModal" title="Quick View">
-                                                            <span class="icon icon-Eye"></span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Product Content End -->
-                                    </div>
-                                    <!-- Single Product End -->
-                                    <!-- Single Product Start -->
-                                    <div class="single-ponno-product">
-                                        <!-- Product Image Start -->
-                                        <div class="pro-img">
-                                            <a href="product-details.html">
-                                                <img class="primary-img" src="img/products/p3.jpg" alt="single-product">
-                                            </a>
-                                        </div>
-                                        <!-- Product Image End -->
-                                        <!-- Product Content Start -->
-                                        <div class="pro-content">
-                                            <div class="pro-info">
-                                                <h4>
-                                                    <a href="product-details.html">xer jenon dslr</a>
-                                                </h4>
-                                                <p>
-                                                    <span class="special-price">$140.00</span>
-                                                </p>
-                                                <div class="product-rating">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star-o"></i>
-                                                    <i class="fa fa-star-o"></i>
-                                                    <span class="quantity-pro">(200+)</span>
-                                                </div>
-                                                <p>Latest Intel mobile architecture Powered by the most advanced mobile processors from Intel, the new Core 2 Duo MacBook Pro is over 50% faster than the original Core Duo MacBook Pro and now sup..</p>
-                                                <p>
-                                                <div class="pro-actions">
-                                                    <div class="pro-add-cart">
-                                                        <a href="cart.html" title="Add to Cart">Add To Cart</a>
-                                                    </div>
-                                                    <div class="pro-actions-link">
-                                                        <a href="compare.html" title="Compare">
-                                                            <span class="icon icon-MusicMixer"></span>
-                                                        </a>
-                                                        <a href="#" data-toggle="modal" data-target="#myModal" title="Quick View">
-                                                            <span class="icon icon-Eye"></span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Product Content End -->
-                                    </div>
-                                    <!-- Single Product End -->
-                                    <!-- Single Product Start -->
-                                    <div class="single-ponno-product">
-                                        <!-- Product Image Start -->
-                                        <div class="pro-img">
-                                            <a href="product-details.html">
-                                                <img class="primary-img" src="img/products/p7.jpg" alt="single-product">
-                                            </a>
-                                        </div>
-                                        <!-- Product Image End -->
-                                        <!-- Product Content Start -->
-                                        <div class="pro-content">
-                                            <div class="pro-info">
-                                                <h4>
-                                                    <a href="product-details.html">jibon mouse pad</a>
-                                                </h4>
-                                                <p>
-                                                    <span class="special-price">$110.00</span>
-                                                </p>
-                                                <div class="product-rating">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star-o"></i>
-                                                    <span class="quantity-pro">(100+)</span>
-                                                </div>
-                                                <p>More room to move. With 80GB or 160GB of storage and up to 40 hours of battery life, the new iPod classic lets you enjoy up to 40,000 songs or up to 200 hours of video or any combination where..</p>
-                                                <p>
-                                                <div class="pro-actions">
-                                                    <div class="pro-add-cart">
-                                                        <a href="cart.html" title="Add to Cart">Add To Cart</a>
-                                                    </div>
-                                                    <div class="pro-actions-link">
-                                                        <a href="compare.html" title="Compare">
-                                                            <span class="icon icon-MusicMixer"></span>
-                                                        </a>
-                                                        <a href="#" data-toggle="modal" data-target="#myModal" title="Quick View">
-                                                            <span class="icon icon-Eye"></span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Product Content End -->
-                                    </div>
-                                    <!-- Single Product End -->
-                                    <!-- Single Product Start -->
-                                    <div class="single-ponno-product">
-                                        <!-- Product Image Start -->
-                                        <div class="pro-img">
-                                            <a href="product-details.html">
-                                                <img class="primary-img" src="img/products/p8.jpg" alt="single-product">
-                                            </a>
-                                        </div>
-                                        <!-- Product Image End -->
-                                        <!-- Product Content Start -->
-                                        <div class="pro-content">
-                                            <div class="pro-info">
-                                                <h4>
-                                                    <a href="product-details.html">jenon Real Box</a>
-                                                </h4>
-                                                <p>
-                                                    <span class="special-price">$140.00</span>
-                                                </p>
-                                                <div class="product-rating">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <span class="quantity-pro">(120+)</span>
-                                                </div>
-                                                <p>Latest Intel mobile architecture Powered by the most advanced mobile processors from Intel, the new Core 2 Duo MacBook Pro is over 50% faster than the original Core Duo MacBook Pro and now sup..</p>
-                                                <p>
-                                                <div class="pro-actions">
-                                                    <div class="pro-add-cart">
-                                                        <a href="cart.html" title="Add to Cart">Add To Cart</a>
-                                                    </div>
-                                                    <div class="pro-actions-link">
-                                                        <a href="compare.html" title="Compare">
-                                                            <span class="icon icon-MusicMixer"></span>
-                                                        </a>
-                                                        <a href="#" data-toggle="modal" data-target="#myModal" title="Quick View">
-                                                            <span class="icon icon-Eye"></span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Product Content End -->
-                                    </div>
-                                    <!-- Single Product End -->
+                                <div id="list-view" class="tab-pane fade fix outer_list">
+                                    
                                 </div>
                                 <!-- #list view End -->
                             </div>
                             <!-- Grid & List Main Area End -->
                         </div>
                         <!-- Shop Breadcrumb Area Start -->
-                        <div class="shop-breadcrumb-area border-default">
+                        <div class="shop-breadcrumb-area border-default paginator">
                             <div class="row">
                                 <div class="col-lg-4 col-md-4 col-sm-5">
-                                    <span class="show-items">Showing 1-12 of 13 item(s) </span>
+                                    <span class="show-items">Producto 1 al 9 de 250 item(s) </span>
                                 </div>
                                 <div class="col-lg-8 col-md-8 col-sm-7">
                                     <ul class="pfolio-breadcrumb-list text-center">
                                         <li class="float-left prev">
                                             <a href="#">
-                                                <i class="fa fa-angle-left" aria-hidden="true"></i>Previous</a>
+                                                <i class="fa fa-angle-left" aria-hidden="true"></i>Anterior</a>
                                         </li>
                                         <li class="active">
                                             <a href="#">1</a>
@@ -1380,7 +787,7 @@
                                             <a href="#">2</a>
                                         </li>
                                         <li class="float-right next">
-                                            <a href="#">Next
+                                            <a href="#">Siguiente
                                                 <i class="fa fa-angle-right" aria-hidden="true"></i>
                                             </a>
                                         </li>
@@ -1396,12 +803,17 @@
             </div>
             <!-- Container End -->
         </div>
-        <!-- Shop Page End -->
 
 
 <?php include('compartida/footer.php') ?>
 
+
 <!-- index js -->
 <script src="js/index/index.js"></script>
+
+<script src="js/shop/shop.js"></script>
+
+
+
 
 </html>
