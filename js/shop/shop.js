@@ -11,11 +11,7 @@ function load(page, categoria) {
 
     console.log(page, categoria);
 
-
     var parametros = { "action": "ajax", "page": page, "categoria": categoria };
-
-    console.log(categoria);
-
 
     $.ajax({
             type: 'POST',

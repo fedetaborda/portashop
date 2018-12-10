@@ -28,8 +28,9 @@
 		$offset = ($page - 1) * $per_page;
 
         //Cuenta el número total de filas de la tabla*/
-        
-        if($categoria == 0 || $caracteristica == 0 ) {
+
+            
+        if($categoria == 0) {
 
             $queryReg = "SELECT count(*) AS numrows FROM  productos";
 
@@ -62,7 +63,7 @@
         }else{
 
 
-            $queryReg = "SELECT count(*) AS numrows
+        $queryReg = "SELECT count(*) AS numrows
         FROM
         productos
         INNER JOIN estado ON productos.estado = estado.id
@@ -70,7 +71,7 @@
         INNER JOIN caracteristica_product ON productos.caracteristica = caracteristica_product.id
         
 
-        WHERE categorias.id = $categoria OR caracteristica_product.id = $caracteristica";
+        WHERE categorias.id = $categoria";
 
 
         //consulta principal para recuperar los datos
@@ -92,15 +93,12 @@
         INNER JOIN categorias ON productos.categoria = categorias.id
         INNER JOIN caracteristica_product ON productos.caracteristica = caracteristica_product.id
         
-
-        WHERE categorias.id = $categoria AND caracteristica_product.id = $caracteristica
-
+        WHERE categorias.id = $categoria
 
         ORDER BY
         productos.id $orden
 
         LIMIT $offset,$per_page";
-
 
         }
 
@@ -283,7 +281,7 @@
         <!-- Shop Breadcrumb Area Start -->
         
 
-            <?php echo paginate($reload, $page, $total_pages, $adjacents, $numrows);?>
+            <?php echo paginate($reload, $page, $total_pages, $adjacents, $numrows, $categoria);?>
                 
 
         </div>
