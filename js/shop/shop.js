@@ -1,39 +1,30 @@
 (function($) {
     "use Strict";
 
-
-    $.ajax({
-            type: 'POST',
-            url: 'servicios/shop_product/shop_grid.php',
-            data: ""
-        })
-        .done(function(data) {
-
-            $(".outer_div").html(data);
-
-        })
-
-    $('#lista-prod').click(function(e) {
-
-        e.preventDefault();
-
-        //console.log('list');
-
-        $.ajax({
-                type: 'POST',
-                url: 'servicios/shop_product/shop_list.php',
-                data: ""
-            })
-            .done(function(data) {
-
-                $(".outer_list").html(data);
-
-            })
-
-
-
-    });
-
+    load(1, 0);
 
 
 })(jQuery);
+
+
+function load(page, categoria) {
+
+    console.log(page, categoria);
+
+
+    var parametros = { "action": "ajax", "page": page, "categoria": categoria };
+
+    console.log(categoria);
+
+
+    $.ajax({
+            type: 'POST',
+            url: 'servicios/shop_product/shop.php',
+            data: parametros,
+        })
+        .done(function(data) {
+
+            $(".productos").html(data);
+
+        })
+}
