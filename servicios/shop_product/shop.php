@@ -17,7 +17,7 @@
 
         //caracteristica 1 todos los productos general
         $caracteristica =  (isset($_REQUEST['caracteristica'])&& $_REQUEST['caracteristica'] !=NULL)?$_REQUEST['caracteristica']:0;
-
+        
         //ordenamiento de productos
         $orden =  (isset($_REQUEST['orden'])&& $_REQUEST['orden'] !=NULL)?$_REQUEST['orden']:'ASC';
 
@@ -30,11 +30,11 @@
         //Cuenta el número total de filas de la tabla*/
 
             
-        if($categoria == 0) {
+        if( $categoria == 0 && $caracteristica == 0 ) {
 
-            $queryReg = "SELECT count(*) AS numrows FROM  productos";
+        $queryReg = "SELECT count(*) AS numrows FROM  productos";
 
-            //consulta principal para recuperar los datos
+        //consulta principal para recuperar los datos
 		$sql = "SELECT
         productos.id,
         productos.codigo_prod,
@@ -53,17 +53,16 @@
         INNER JOIN categorias ON productos.categoria = categorias.id
         INNER JOIN caracteristica_product ON productos.caracteristica = caracteristica_product.id
         
-
         ORDER BY
         productos.id $orden
 
         LIMIT $offset,$per_page";
 
+        }
 
-        }else{
+        elseif  ($categoria <> 0 && $caracteristica == 0) {
 
-
-        $queryReg = "SELECT count(*) AS numrows
+            $queryReg = "SELECT count(*) AS numrows
         FROM
         productos
         INNER JOIN estado ON productos.estado = estado.id
@@ -100,20 +99,61 @@
 
         LIMIT $offset,$per_page";
 
+
+
+        } elseif ( $caracteristica <> 0 && $categoria == 0){
+
+        $queryReg = "SELECT count(*) AS numrows
+        FROM
+        productos
+        INNER JOIN estado ON productos.estado = estado.id
+        INNER JOIN categorias ON productos.categoria = categorias.id
+        INNER JOIN caracteristica_product ON productos.caracteristica = caracteristica_product.id
+        
+
+        WHERE caracteristica_product.id = $caracteristica";
+
+
+        //consulta principal para recuperar los datos
+		$sql = "SELECT
+        productos.id,
+        productos.codigo_prod,
+        productos.descripcion,
+        productos.precio,
+        productos.stock,
+        productos.stock_min,
+        productos.comentario,
+        productos.fecha_ingreso,
+        estado.estado,
+        categorias.categoria,
+        caracteristica_product.caracteristica
+        FROM
+        productos
+        INNER JOIN estado ON productos.estado = estado.id
+        INNER JOIN categorias ON productos.categoria = categorias.id
+        INNER JOIN caracteristica_product ON productos.caracteristica = caracteristica_product.id
+        
+        WHERE caracteristica_product.id = $caracteristica
+
+        ORDER BY
+        productos.id $orden
+
+        LIMIT $offset,$per_page";
+
         }
+    
 
         $numrows = Database:: get_valor_query($queryReg, 'numrows' );
         
     	
 		$total_pages = ceil($numrows/$per_page);
 
-		$reload = 'index.php';
+        $reload = 'index.php';
 
-        
+       
+        $echo = Database:: get_arreglo($sql);       
 
-        $echo = Database:: get_arreglo($sql);
-
-        include 'filter.php';
+        include 'filter.php';    
 
 ?>      
 
@@ -281,7 +321,7 @@
         <!-- Shop Breadcrumb Area Start -->
         
 
-            <?php echo paginate($reload, $page, $total_pages, $adjacents, $numrows, $categoria);?>
+            <?php echo paginate($reload, $page, $total_pages, $adjacents, $numrows, $categoria, $caracteristica);?>
                 
 
         </div>

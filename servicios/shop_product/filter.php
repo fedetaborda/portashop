@@ -3,6 +3,20 @@
 // Incluir la clase de base de datos
 include_once("../../class/class.Database.php");
 
+$sql2="SELECT
+caracteristica_product.caracteristica,
+Count(*) AS cantidad,
+caracteristica_product.id
+FROM
+productos
+INNER JOIN caracteristica_product ON productos.caracteristica = caracteristica_product.id
+
+GROUP BY productos.caracteristica
+LIMIT 10";
+
+$caract = Database:: get_arreglo($sql2);
+
+
 $sql="SELECT
 categorias.categoria,
 Count(*) AS cantidad,
@@ -16,8 +30,7 @@ categorias.estado = 1
 GROUP BY productos.categoria
 ORDER BY
 categorias.categoria ASC
-LIMIT 5";
-
+LIMIT 10";
 
 $cat = Database:: get_arreglo($sql);
 
@@ -33,15 +46,19 @@ $cat = Database:: get_arreglo($sql);
             <!-- Price Filter Options End -->
             <!-- Sidebar Categorie Start -->
             <div class="sidebar-categorie mb-30">
-                <h3 class="sidebar-title">categories</h3>
+                <h3 class="sidebar-title">categorias</h3>
                 <ul class="sidbar-style">
+
+                <li class="form-check">
+                        <label class="form-check-label" onclick="load( 1, 0, 0)">Todas (<?php echo count($cat) ?>)</label>
+                </li>
 
                 <?php
 
                     for ($i=0; $i < count($cat) ; $i++) { 
                 ?>
                     <li class="form-check active">
-                        <label onclick="load( 1, <?php echo $cat[$i]['id']; ?>)" class="form-check-label"><?php echo $cat[$i]['categoria']; ?> (<?php echo $cat[$i]['cantidad']; ?>)</label>
+                        <label onclick="load( 1, <?php echo $cat[$i]['id']; ?>, 0)" class="form-check-label"><?php echo $cat[$i]['categoria']; ?> (<?php echo $cat[$i]['cantidad']; ?>)</label>
                     </li>
 
                 <?php
@@ -52,20 +69,21 @@ $cat = Database:: get_arreglo($sql);
             <!-- Sidebar Categorie Start -->
             <!-- Product Size Start -->
             <div class="size mb-30">
-                <h3 class="sidebar-title">size</h3>
+                <h3 class="sidebar-title">Especiales</h3>
                 <ul class="size-list sidbar-style">
+            
+                <?php
+
+                for ($i=0; $i < count($caract) ; $i++) { 
+                ?>
+
                     <li class="form-check">
-                        <input class="form-check-input" value="" id="small" type="checkbox">
-                        <label class="form-check-label" for="small">S (6)</label>
+                        <label class="form-check-label" onclick="load( 1, 0, <?php echo $caract[$i]['id']; ?>)"><?php echo $caract[$i]['caracteristica']; ?> (<?php echo $caract[$i]['cantidad']; ?>)</label>
                     </li>
-                    <li class="form-check">
-                        <input class="form-check-input" value="" id="medium" type="checkbox">
-                        <label class="form-check-label" for="medium">M (9)</label>
-                    </li>
-                    <li class="form-check">
-                        <input class="form-check-input" value="" id="large" type="checkbox">
-                        <label class="form-check-label" for="large">L (8)</label>
-                    </li>
+
+                <?php
+                }
+                ?>
                 </ul>
             </div>
             <!-- Product Size End -->

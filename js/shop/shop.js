@@ -1,17 +1,17 @@
 (function($) {
     "use Strict";
 
-    load(1, 0);
+    load(1, 0, 0);
 
 
 })(jQuery);
 
 
-function load(page, categoria) {
+function load(page, categoria, caracteristica) {
 
-    console.log(page, categoria);
+    console.log(page, categoria, caracteristica);
 
-    var parametros = { "action": "ajax", "page": page, "categoria": categoria };
+    var parametros = { "action": "ajax", "page": page, "categoria": categoria, "caracteristica": caracteristica };
 
     $.ajax({
             type: 'POST',
